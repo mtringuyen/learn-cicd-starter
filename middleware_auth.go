@@ -7,6 +7,7 @@ import (
 	"github.com/bootdotdev/learn-cicd-starter/internal/database"
 )
 
+// authedHandler type func
 type authedHandler func(http.ResponseWriter, *http.Request, database.User)
 
 func (cfg *apiConfig) middlewareAuth(handler authedHandler) http.HandlerFunc {
